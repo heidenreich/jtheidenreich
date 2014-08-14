@@ -77,7 +77,7 @@ body, html {
     background-color: $warm;
     // opacity: 0.95;
     border: none;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0 4px 2px -2px $coolbrown;
 }
 
 .navbar .nav > li > a {
@@ -111,15 +111,16 @@ body, html {
         height: auto;
         
         padding: 16px;
-        p {
-          color: $coolwhite;
-        }
+
     }
 
     #intro {
         font-size: 24px;
-        color: rgb(228, 229, 224);
+        color: $coolbrown;
         margin-left: 6px;
+    }
+    p {
+        color: $coolbrown;
     }
 
     h1 {
@@ -172,7 +173,7 @@ body, html {
     }
 
     .story {
-        padding: 106px 0 64px 0;
+        padding: 40px 0 20px 0;
     }
 }
  
@@ -188,6 +189,11 @@ body, html {
 // MY WORK
 .my-work {
     @extend .about-me;
+
+        h1  {
+        margin-top: 40px;
+        color: $coolbrown;
+    }
 
     .btn-default {
         background-color: rgb(35, 30, 27);
@@ -206,8 +212,14 @@ body, html {
         display: inline-block;
         margin-top: 10px;
         margin-right: 10px;
+        margin-bottom: 40px;
         color: $coolbrown;
-        padding: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 40px;
+        -webkit-box-shadow: 0 8px 6px -6px $coolbrown;
+        -moz-box-shadow: 0 8px 6px -6px $coolbrown;
+        box-shadow: 0 8px 6px -6px $coolbrown;
 
         h3 {
             font-size: 22px;
@@ -224,9 +236,8 @@ body, html {
             font-size: 18px;
         }
 
-        .people-pic {
-            width: 260px;
-            opacity: 0.9;
+        .btn{
+          margin: 20px;
         }
 
     }
@@ -254,7 +265,7 @@ body, html {
     background-color: $warm;
 
     h1  {
-        margin-top: 90px;
+        margin-top: 40px;
         color: $coolbrown;
     }
 
@@ -344,16 +355,17 @@ body, html {
 // FOOTER
 
 .footer {
-    height: 60px;
+    height: 40px;
     background-color: $warm;
     p{
       color: $coolbrown;
+      margin-top: 10px;
     }
 }
 
 @media (max-width: 768px) {
     .footer {
-        height: 100px;
+        height: 50px;
     }
 }
 
