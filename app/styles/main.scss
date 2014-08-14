@@ -1,8 +1,14 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
-
+@import url(http://fonts.googleapis.com/css?family=Kreon:400,700);
 // bower:scss
 @import '../../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 // endbower
+
+$coolgreen: #CDE855;
+$warm: #A7C520;
+$coolbrown: #493F0B;
+$coolwhite: #F5F6D4;
+$bright: #85DB18;
 
 .browsehappy {
     margin: 0.2em 0;
@@ -11,83 +17,352 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+body, html {
+    font-family: 'Open Sans', sans-serif;
+    width: auto !important;
+    overflow-x: hidden !important;
+    font-weight: 300;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
+
+
+// FULLSCREEN BACKGROUND IMAGE
+.bg-img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+    
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+    
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
+
+}
+//lets make that image show up again
+.spacer {
+  height: 200px;
+
+}
+
+
+@media screen and (max-width: 768px) { /* Specific to this particular image */
+  .bg-img {
+    left: -25%;
+    margin-top: 50px;   /* 50% */
+  }
+}
+
+// NAVBAR 
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar .nav {
+    border-radius: 0;
+}
+
+.navbar {
+    background-color: $warm;
+    // opacity: 0.95;
+    border: none;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.navbar .nav > li > a {
+  color: $coolbrown;
+  font-size: 18px;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+.navbar .nav > li > a:hover {
+  color: rgb(147, 183, 153);
+  // box-shadow: inset 0px -2px 0 rgb(147, 183, 153);
+}
+
+@media (max-width: 1160px) {
+    .navbar .nav > li > a {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+// HOME PAGE 
+
+.home-page {
+
+    height: 700px;
+
+    .my-intro {
+        margin-top: 120px;
+        background-color: rgba($coolgreen, .5);
+        height: auto;
+        
+        padding: 16px;
+        p {
+          color: $coolwhite;
+        }
+    }
+
+    #intro {
+        font-size: 24px;
+        color: rgb(228, 229, 224);
+        margin-left: 6px;
+    }
+
+    h1 {
+        font-size: 78px;
+        color: $coolbrown;
+        margin-top: 10px;
+        font-weight: 300;
+    }
+
+    #description {
+        @extend #intro;
+        margin-top: 0px;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .home-page {
+
+        .my-intro {
+            margin: 0px;
+            padding: 30px;
+        }
+
+        #intro {
+            font-size: 20px;
+            margin: 26px 0 0 6px;
+        }
+
+        h1 {
+            font-size: 44px;
+        }
+
+        #description {
+            margin-top: 10px;
+        }
+    }
+}
+
+// ABOUT SECTION
+
+.about-me {
+    height: auto;
+    background-color: $warm;
+
+    p {
+        font-size: 18px;
+        padding: 10px;
+        color: $coolbrown;
+    }
+
+    .story {
+        padding: 106px 0 64px 0;
+    }
+}
+ 
+.no-padding {
+    padding: 0;
+}
+
+.camera-pic img {
+    width: 100%;
+    height: auto;
+}
+
+// MY WORK
+.my-work {
+    @extend .about-me;
+
+    .btn-default {
+        background-color: rgb(35, 30, 27);
+        color: rgb(212, 215, 135);
+        border-radius: 0;
+        border: none;
+    }
+
+    .btn-default:hover {
+        opacity: 0.7; 
+    }
+
+    .thumbnail {
+        background-color: $coolgreen;
+        border: none;
+        display: inline-block;
+        margin-top: 10px;
+        margin-right: 10px;
+        color: $coolbrown;
+        padding: 20px;
+
+        h3 {
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        img {
+            width: 300px;
+        }
+
+        p {
+            width: 320px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .people-pic {
+            width: 260px;
+            opacity: 0.9;
+        }
+
+    }
+
+    .first-row  {
+        margin-top: 100px;
+    }
+
+    .second-row {
+        margin-bottom: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .thumbnail img {
+        width: 240px;
+    }
+}
+
+
+
+// CONNECT
+.connect {
+    height: auto;
+    background-color: $warm;
+
+    h1  {
+        margin-top: 90px;
+        color: $coolbrown;
+    }
+
+    .social-icons {
+        margin: 40px 0;
+
+        .fa{
+          color: $coolbrown;
+      }
+    }
+
+    p {
+        font-size: 26px;
+        color: $coolbrown;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: rgb(124, 124, 121);
+        }
+    }
+
+    ul {
+        text-align: center;
+    }
+
+    ul > li {
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 40px;
+
+        img {
+            width: 80px;
+            opacity: 0.7;
+        }
+
+        img:hover {
+            opacity: 1;
+        }
+    }
+
+    .camera-pic {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 1080px) {
+    .connect h1 {
+        font-size: 26px;   
+    }
+}
+
+@media (max-width: 992px) {
+    .connect ul > li {
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .connect {
+        ul {
+            text-align: inherit;
+        }
+        ul > li {
+            margin: 0 4px;
+        }
+
+        h1 {
+            font-size: 20px;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 22px;
+        }
+    }
+
+    .social-icons ul > li > a > img {
+        width: 42px;
+    }
+}
+
+
+// FOOTER
+
 .footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-
-    /* Make the masthead heading the same height as the navigation */
-    h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 40px;
-        padding-bottom: 19px;
+    height: 60px;
+    background-color: $warm;
+    p{
+      color: $coolbrown;
     }
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-    .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-    }
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-    p + h4 {
-        margin-top: 28px;
-    }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
+@media (max-width: 768px) {
     .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
+        height: 100px;
     }
 }
+
+
+
+
+
+
+
+
+
+

@@ -14,6 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="../bower_components/modernizr/modernizr.js"></script>
@@ -25,47 +26,153 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- BACKGROUND IMAGE -->
+        <img src="images/s-tyger-river.jpg" class="bg-img">
 
-        <div class="container">
-            <div class="header">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-                <h3 class="text-muted">jtheidenreich</h3>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- <a class="navbar-brand" href="#">Brand</a> -->
             </div>
 
-            <div class="jumbotron">
-                <h1>'Allo, 'Allo!</h1>
-                <p class="lead">Always a pleasure scaffolding your apps.</p>
-                <p><a class="btn btn-lg btn-success" href="#">Splendid! <span class="glyphicon glyphicon-ok"></span></a></p>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="#nav-home">jtheidenreich</a></li>
+                <li><a href="#nav-about">About</a></li>
+                <li><a href="#nav-mywork">Work</a></li>
+                
+                <li><a href="#nav-connect">Connect</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <!-- HOMEPAGE -->
+        <div class="row home-page" id="nav-home">
+            <div class="col-xs-12 col-md-6  col-sm-offset-2 col-sm-6  col-lg-6  my-intro">
+                <p id="intro">hello, my name is</p>
+                <h1>Todd Heidenreich</h1>
+<!--                 <p id="description">i'm a front end developer with attention to detail, ready to bring exceptional value to you and your clients.</p> -->
             </div>
+        </div>
 
-            <div class="row marketing">
-                <div class="col-lg-6">
-                    <h4>HTML5 Boilerplate</h4>
-                    <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-
-                    <h4>Sass</h4>
-                    <p>Sass is a mature, stable, and powerful professional grade CSS extension language.</p>
-
-
-                    <h4>Bootstrap</h4>
-                    <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-
-                    <h4>Modernizr</h4>
-                    <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-
+        <div class="row about-me" id="nav-about">
+            <div class="container">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 story">
+                   <p>In April 2014 I graduated from The Iron Yard Academy where I learned the skills needed to become a front-end developer. My goal is to contribute my own skills to an energetic, creative and challenging group of peers. A strong desire to continue learning, excellent communication skills and sharp attention to detail are just a few of the assets I will bring to your team.</p>
+                   <p>When I'm not heads down in Bootstrap, responsive design or otherwise sharpening my skills on the front end, you'll likely find me spending time with my wife, Laura, and our two boys, Alex and Sam. I love spending time  outdoors enjoying the mountains of North Carolina or the beaches of the Carolina coast, or exploring the country roads on my road bike.</p>
                 </div>
             </div>
 
-            <div class="footer">
-                <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-            </div>
+<!--             <div class="camera-pic">
+                <div class="col-lg-12 no-padding">
+                   <img src="images/marsh-nc.jpg">
+                </div>
+            </div> -->
+        </div>
+        <div class="row spacer"></div>
+        <!-- MYWORK SECTION -->
+        <div class="row my-work" id="nav-mywork">
+            <!-- <div class="col-xs-12 col-lg-10 col-lg-offset-1"> -->
+                <div class="row first-row">
+                    <!-- <div class="container"> -->
+                        <div class="col-lg-12 text-center">
+                            <div class="thumbnail">
+                                <img src="images/Mobber.png" alt="...">
+                                <div class="caption">
+                                    <h3>Pixel Perfect</h3>
+                                    <p>Day 2 assignment at The Iron Yard. Create a pixel perfect rendition of a Photoshop Document(PSD). Using HTML5 & CSS3.</p>
+                                    <a href="http://heidenreich.github.io/mobber/" target="blank"><button type="button" class="btn btn-default">Visit Project</button></a>
+                                    <a href="https://github.com/heidenreich/mobber" target="blank"><button type="button" class="btn btn-default">Visit GitHub</button></a>
+                                </div>
+                            </div>
+                            <div class="thumbnail">
+                                <img src="images/weather-app.png" alt="...">
+                                <div class="caption">
+                                    <h3>Iron Yard Weather</h3>
+                                    <p>An Iron Yard Project- practice with API. I used the Open Weather API to collect weather data and create a forecast ro the cities of the Iron Yard.</p>
+                                    <a href="http://heidenreich.github.io/weather-app/" target="blank"><button type="button" class="btn btn-default">Visit Project</button></a>
+                                    <a href="https://github.com/heidenreich/weather-app" target="blank"><button type="button" class="btn btn-default">Visit GitHub</button></a>
+                                </div>
+                            </div>
 
+                            <div class="thumbnail">
+                                <img src="images/nwAPI.png" alt="...">
+                                <div class="caption">
+                                    <h3>Next Weather API</h3>
+                                    <p>Iron Yard final project. I programmed Arduino units to collect weather data and made the data available to all with this API.</p>
+                                     <a href="http://heidenreich.github.io/nwAPI/" target="blank"><button type="button" class="btn btn-default">Visit Project</button></a>
+                                    <a href="https://github.com/heidenreich/nwAPI" target="blank"><button type="button" class="btn btn-default">Visit GitHub</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+
+            <!-- </div> -->
+        </div>
+        <div class="row spacer"></div>
+ 
+        <!-- CONNECT SECTION -->
+        <div class="row connect" id="nav-connect">
+              <!-- <div class="row text-center"> -->
+                  <div class="col-xs-12 col-lg-10 col-lg-offset-1 text-center">
+                      <h1>I'd love to connect.</h1>
+                  </div>
+              <!-- </div>        -->
+              <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12 social-icons">
+                      <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/pub/todd-heidenreich/94/316/6b9" target="blank"><i class="fa fa-linkedin-square fa-4x"></i> </a>
+                            </li>
+                          <li><a href="https://twitter.com/jtheidenreich" target="blank"><i class="fa fa-twitter fa-4x"></i></a></li>
+                          <li><a href="https://jtheidenreich.wordpress.com/" target="blank"><i class="fa fa-wordpress fa-4x"></i></a></li>
+                          <li><a href="https://github.com/heidenreich" target="blank"><i class="fa fa-github fa-4x"></i></a></li>  
+                          <li><a href="http://stackoverflow.com/users/3472855/heidenreich"><i class="fa fa-stack-overflow fa-4x"></i></a></li>  
+                      </ul>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="container">
+                  <div class="col-lg-10 col-lg-offset-1 text-center">
+                      <p><a href="mailto:jtheidenreich@gmail.com">jtheidenreich@gmail.com</a> | 864.978.8449</p>
+                  </div>
+                </div>
+              </div>
+          
+            <div class="camera-pic">
+<!--                 <div class="col-lg-12 no-padding">
+                   <img src="images/road-race.jpg">
+                </div> -->
+            </div>
+        </div>
+        <div class="row spacer"></div>
+        <!-- FOOTER SECTION -->
+        <div class="footer text-center">
+            <div class="row">
+              <div class="col-lg-12">
+                <p>Webpage &copy James Todd Heidenreich 2014</p>
+              </div>
+            </div>
+            <div class="row">
+<!--                 <div class="col-lg-12">
+                    <p>Background image courtesy of <a href="https://www.flickr.com/photos/35528040@N04/">Pam Morris</a> | Camera image courtesy of <a href="https://www.flickr.com/photos/fdotguido/">Frank Guido</a> | via <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/legalcode">Creative Commons License</a></p>
+                </div> -->
+            </div>
         </div>
 
+ 
+    
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
@@ -101,5 +208,5 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
-</body>
+    </body>
 </html>
