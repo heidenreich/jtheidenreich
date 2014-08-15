@@ -44,7 +44,7 @@ body, html {
   z-index: -1;
 
 }
-//lets make that image show up again
+//lets make that image show up again and again
 .spacer {
   height: 200px;
 
@@ -88,7 +88,8 @@ body, html {
 }
 
 .navbar .nav > li > a:hover {
-  color: rgb(147, 183, 153);
+  color: grey;
+  font-size: 24px;
   // box-shadow: inset 0px -2px 0 rgb(147, 183, 153);
 }
 
@@ -181,10 +182,6 @@ body, html {
     padding: 0;
 }
 
-.camera-pic img {
-    width: 100%;
-    height: auto;
-}
 
 // MY WORK
 .my-work {
@@ -217,9 +214,7 @@ body, html {
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 40px;
-        -webkit-box-shadow: 0 8px 6px -6px $coolbrown;
-        -moz-box-shadow: 0 8px 6px -6px $coolbrown;
-        box-shadow: 0 8px 6px -6px $coolbrown;
+       box-shadow: 2px 2px 2px $coolbrown;
 
         h3 {
             font-size: 22px;
@@ -274,6 +269,12 @@ body, html {
 
         .fa{
           color: $coolbrown;
+
+      }
+
+      .fa:hover {
+
+        color: grey;
       }
     }
 
@@ -283,11 +284,12 @@ body, html {
 
         a {
             text-decoration: none;
-            color: black;
+            color: $coolbrown;
         }
 
         a:hover {
-            color: rgb(124, 124, 121);
+            
+            color: grey;
         }
     }
 
